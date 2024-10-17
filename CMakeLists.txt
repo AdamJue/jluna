@@ -35,7 +35,7 @@ endif()
 
 ### Find Julia ###
 
-#list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/find")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/find")
 find_package(Julia REQUIRED)
 if (NOT Julia_FOUND)
     message("Skipping Julia: ${Julia_NOT_FOUND_MESSAGE}")
