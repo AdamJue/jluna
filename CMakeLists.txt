@@ -37,6 +37,11 @@ endif()
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/find")
 find_package(Julia 1.7.0 REQUIRED)
+if (NOT Julia_FOUND)
+    message("Skipping Julia: ${Julia_NOT_FOUND_MESSAGE}")
+    return ()
+endif()
+message (STATUS "Julia_VERSION: ${Julia_VERSION}")
 
 ### Find Threads ###
 
